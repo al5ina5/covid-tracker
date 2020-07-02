@@ -1,0 +1,20 @@
+{
+  "name": "covid-tracker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "deploy": "git add . && git commit -am \"Auto Deploy\" && git push"
+  },
+  "dependencies": {
+    "anticss": "^1.0.15",
+    "axios": "^0.19.2",
+    "format-number": "^3.0.0",
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
