@@ -1,5 +1,6 @@
 import React from 'react'
 import Axios from 'axios'
+import { formatNumber } from '../../utils'
 
 class StateTracker extends React.Component {
     constructor(props) {
@@ -9,11 +10,6 @@ class StateTracker extends React.Component {
             state: '',
             covid: {}
         }
-    }
-
-    formatNumber(num) {
-        var num = num || 0
-        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
     }
 
     componentDidMount = () => {
@@ -31,6 +27,7 @@ class StateTracker extends React.Component {
         return <>
             <section>
                 <h1>COVID-19 in {this.props.state.toUpperCase()}</h1>
+                <p>Last updated at <code>{this.props.covid.dateModified}</code>.</p>
             </section>
 
             <section>
@@ -41,16 +38,27 @@ class StateTracker extends React.Component {
                 <h2>
                     In the state of {this.props.state.toUpperCase()}...
                 </h2>
-                <p>{this.formatNumber(this.props.covid.positive)} have tested positive.</p>
-                <p>{this.formatNumber(this.props.covid.hospitalized)} have been hospitalized.</p>
-                <p>{this.formatNumber(this.props.covid.death)} have died.</p>
+                <p>{formatNumber(this.props.covid.positive)} have tested positive.</p>
+                {/* <p>{formatNumber(this.props.covid.hospitalized)} have been hospitalized.</p> */}
+                <p>{formatNumber(this.props.covid.death)} have died.</p>
             </section>
 
             <section>
                 <h2>Today in COVID-19...</h2>
-                <p>{this.formatNumber(this.props.covid.positiveIncrease)} tested positive.</p>
-                <p>{this.formatNumber(this.props.covid.hospitalizedIncrease)} were hospitalized.</p>
-                <p>{this.formatNumber(this.props.covid.deathIncrease)} died.</p>
+                <p>{formatNumber(this.props.covid.positiveIncrease)} tested positive.</p>
+                {/* <p>{formatNumber(this.props.covid.hospitalizedIncrease)} were hospitalized.</p> */}
+                <p>{formatNumber(this.props.covid.deathIncrease)} died.</p>
+            </section>
+
+            <section>
+                <h2>How can I help?</h2>
+                <ul>
+                    <li>Wear a mask.</li>
+                    <li>Staying home and following social-distance guidelines.</li>
+                    <li>Keep your distance from people in public.</li>
+                    <li>Wash your hands!</li>
+                    <li>Provide awareness around COVID-19 and Coronavirus.</li>
+                </ul>
             </section>
 
             {/* <section>

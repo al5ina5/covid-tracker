@@ -1,6 +1,8 @@
 import React from 'react'
 import Axios from 'axios'
-import { withRouter } from 'next/router'
+import Link from 'next/link'
+import States from './states.json'
+import { formatNumber } from '../../utils'
 
 class Index extends React.Component {
     constructor(props) {
@@ -16,7 +18,12 @@ class Index extends React.Component {
         return <>
             <section>
                 <h1>COVID-19 in the USA</h1>
-                <p>Track the latest numbers in COVID-19 by state.</p>
+                <h2>{formatNumber(this.props.covid.positive)} positive cases in the USA.</h2>
+            </section>
+
+            <section>
+                <h2>Track by State</h2>
+                <p>Track the latest numbers in COVID-19 by state. Enter your state code.</p>
 
                 {this.state.alert && (
                     <p>{this.state.alert}</p>
@@ -49,7 +56,32 @@ class Index extends React.Component {
                     }}>Track</button>
                 </form>
             </section>
+
+            <section>
+                <h2>Quick Links</h2>
+                <p>
+                    {Object.keys(States).map((state, index) => (
+                        <>
+                            <Link key={index} href="/[state]" as={`/${state.toLowerCase()}`}>
+                                <a>{States[state]} ({state})</a>
+                            </Link>, &nbsp;
+                        </>
+                    ))}
+                </p>
+            </section>
         </>
+    }
+}
+
+export async function getServerSideProps(context) {
+    var get = await Axios.get(`https://covidtracking.com/api/v1/us/current.json`).catch(err => console.log(err))
+
+    var data = get.data[0]
+
+    return {
+        props: {
+            covid: data
+        }
     }
 }
 
