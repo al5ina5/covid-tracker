@@ -10,7 +10,6 @@
     "deploy": "git add . && git commit -am \"Auto Deploy\" && git push"
   },
   "dependencies": {
-    "anticss": "^1.0.15",
     "axios": "^0.19.2",
     "format-number": "^3.0.0",
     "next": "^9.4.4",

@@ -1283,11 +1283,6 @@ ansi-styles@^4.1.0:
     "@types/color-name" "^1.1.1"
     color-convert "^2.0.1"
 
-anticss@^1.0.15:
-  version "1.0.15"
-  resolved "https://registry.yarnpkg.com/anticss/-/anticss-1.0.15.tgz#cc76a7a80782a4f93a597eef44d6841ab6d86152"
-  integrity sha512-wXusXC9PiWUzKaNFhdqMenq2RFKG0sLngQU5IldQRB9IoUYJq1jECKm7EyP7gv1E77bhl+IAaFKOL946jx7opQ==
-
 anymatch@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/anymatch/-/anymatch-2.0.0.tgz#bcb24b4f37934d9aa7ac17b4adaf89e7c76ef2eb"
