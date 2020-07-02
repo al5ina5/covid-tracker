@@ -18,7 +18,7 @@ class Index extends React.Component {
         return <>
             <section>
                 <h1>COVID-19 in the USA</h1>
-                <h2>{formatNumber(this.props.covid.positive)} positive cases in the USA.</h2>
+                <h2>{formatNumber(this.props.covid.positive)} positive cases in the USA. {formatNumber(this.props.covid.death)} have resulted in death.</h2>
             </section>
 
             <section>

@@ -27,27 +27,31 @@ class StateTracker extends React.Component {
         return <>
             <section>
                 <h1>COVID-19 in {this.props.state.toUpperCase()}</h1>
-                <p>Last updated at <code>{this.props.covid.dateModified}</code>.</p>
+                <h2>{formatNumber(this.props.covid.positive)} have tested positive in {this.props.state.toUpperCase()}. {formatNumber(this.props.covid.death)} have died.</h2>
+                <h2>Today, {formatNumber(this.props.covid.positiveIncrease)} more tested positive and {formatNumber(this.props.covid.deathIncrease)} died.</h2>
             </section>
 
             <section>
-
-            </section>
-
-            <section>
-                <h2>
-                    In the state of {this.props.state.toUpperCase()}...
-                </h2>
-                <p>{formatNumber(this.props.covid.positive)} have tested positive.</p>
-                {/* <p>{formatNumber(this.props.covid.hospitalized)} have been hospitalized.</p> */}
-                <p>{formatNumber(this.props.covid.death)} have died.</p>
-            </section>
-
-            <section>
-                <h2>Today in COVID-19...</h2>
-                <p>{formatNumber(this.props.covid.positiveIncrease)} tested positive.</p>
-                {/* <p>{formatNumber(this.props.covid.hospitalizedIncrease)} were hospitalized.</p> */}
-                <p>{formatNumber(this.props.covid.deathIncrease)} died.</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Statistic</th>
+                            <th>Value</th>
+                        </tr>
+                        <tr>
+                            <td>Hospitalized Currently</td>
+                            <td>{formatNumber(this.props.covid.hospitalizedCurrently)}</td>
+                        </tr>
+                        <tr>
+                            <td>Hospitalized Cumulative</td>
+                            <td>{formatNumber(this.props.covid.hospitalizedCumulative)}</td>
+                        </tr>
+                        <tr>
+                            <td>Hospitalized Increase</td>
+                            <td>{formatNumber(this.props.covid.hospitalizedIncrease)}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
 
             <section>
@@ -60,21 +64,6 @@ class StateTracker extends React.Component {
                     <li>Provide awareness around COVID-19 and Coronavirus.</li>
                 </ul>
             </section>
-
-            {/* <section>
-                <table>
-                    <tbody>
-                        <tr>
-                            <th>Name</th>
-                            <th>Statistic</th>
-                        </tr>
-                        <tr>
-                            <td>1000</td>
-                            <td>100</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section> */}
 
             <section>
                 <p>Data from <a target="_blank" href="https://covidtracking.com/">covidtracking.com</a>. Updated frequently.</p>
