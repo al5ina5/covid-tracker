@@ -69,6 +69,13 @@ class Index extends React.Component {
                     ))}
                 </p>
             </section>
+
+            <section>
+                <p>Data from <a target="_blank" href="https://covidtracking.com/">covidtracking.com</a>. Updated frequently.</p>
+                <pre>
+                    https://covidtracking.com/api/v1/us/current.json
+                </pre>
+            </section>
         </>
     }
 }
