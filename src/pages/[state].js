@@ -27,7 +27,7 @@ class StateTracker extends React.Component {
     render() {
         return <>
             <Head>
-                <title>{this.props.state.toUpperCase()} COVID-19: The Numbers</title>
+                <title>{this.props.state.toUpperCase()} - COVID-19: The Numbers</title>
             </Head>
             <section>
                 <h1>COVID-19 in {this.props.state.toUpperCase()}</h1>
