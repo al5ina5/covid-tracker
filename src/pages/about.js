@@ -18,8 +18,8 @@ class About extends React.Component {
 
             <section>
                 <h2>About</h2>
-                <p>
-                    I built this COVID-19 statistics tracker for 2 reasons: to provide awareness to the ongoing pandemic who is affecting the lives of many worldwide, and to put my skills as a developer to good use to create something that can help better the world. I believe it is extremely important that we respect social-distancing guidelines to ensure the planet's earliest recovery—and spare the most amount of lives while in the process. This website shows the hard (but true) numbers behind the infamous COVID-19.
+                <p>...
+                    {/* I built this COVID-19 statistics tracker for 2 reasons: to provide awareness to the ongoing pandemic who is affecting the lives of many worldwide, and to put my skills as a developer to good use to create something that can help better the world. I believe it is extremely important that we respect social-distancing guidelines to ensure the planet's earliest recovery—and spare the most amount of lives while in the process. This website shows the hard (but true) numbers behind the infamous COVID-19. */}
                 </p>
                 <p>Yours truly,</p>
                 <p><a target="_blank" href="https://sebastianalsina.com/">Sebastian Alsina</a></p>
