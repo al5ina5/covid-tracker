@@ -2,10 +2,10 @@ import Head from 'next/head'
 
 const Meta = () => (
     <Head>
-        <title>COVID-19 - Statistics</title>
-        <meta name="og:title" property="og:title" content="COVID-19 - Statistics" />
-        <meta property="og:site_name" content="COVID-19 - Statistics" />
-        <meta name="twitter:title" content="COVID-19 - Statistics" />
+        <title>COVID-19: The Numbers</title>
+        <meta name="og:title" property="og:title" content="COVID-19: The Numbers" />
+        <meta property="og:site_name" content="COVID-19: The Numbers" />
+        <meta name="twitter:title" content="COVID-19: The Numbers" />
 
         <meta name="description" content="COVID-19 statistics for every state in the USA." />
         <meta name="og:description" property="og:description" content="COVID-19 statistics for every state in the USA." />

@@ -22,12 +22,12 @@ class About extends React.Component {
                     I built this COVID-19 statistics tracker for 2 reasons: to provide awareness to the ongoing pandemic who is affecting the lives of many worldwide, and to put my skills as a developer to good use to create something that can help better the world. I believe it is extremely important that we respect social-distancing guidelines to ensure the planet's earliest recovery—and spare the most amount of lives while in the process. This website shows the hard (but true) numbers behind the infamous COVID-19.
                 </p>
                 <p>Yours truly,</p>
-                <p><a href="https://sebastianalsina.com/">Sebastian Alsina</a></p>
+                <p><a target="_blank" href="https://sebastianalsina.com/">Sebastian Alsina</a></p>
             </section>
 
             <section>
                 <h2>Contact</h2>
-                <a href="#">
+                <a target="_blank" href="https://discord.gg/2cuchD9">
                     <button>
                         Join me on Discord
                     </button>
@@ -39,17 +39,17 @@ class About extends React.Component {
                 <h2>Technology</h2>
                 <p>This tracker uses a combination of many technologies to present the facts.</p>
                 <ul>
-                    <li>This website is hosted on <a href="http://vercel.com">Vercel</a>.</li>
-                    <li>The website is built in <a href="https://nextjs.org">NextJS</a>.</li>
-                    <li>The website design (CSS framework) is powered by <a href="https://anticss.vercel.app">anti.css</a>—a class-less CSS framework to build modern web-apps.</li>
-                    <li><a href="https://covidtracking.com/">The COVID Tracking Project</a> for COVID statistics and analytics.</li>
+                    <li>This website is hosted on <a target="_blank" href="http://vercel.com">Vercel</a>.</li>
+                    <li>The website is built in <a target="_blank" href="https://nextjs.org">NextJS</a>.</li>
+                    <li>The website design (CSS framework) is powered by <a target="_blank" href="https://anticss.vercel.app">anti.css</a>—a class-less CSS framework to build modern web-apps.</li>
+                    <li><a target="_blank" href="https://covidtracking.com/">The COVID Tracking Project</a> for COVID statistics and analytics.</li>
                 </ul>
             </section>
             <section>
                 <h2>Support the Developer</h2>
                 <p>There's probably way better places you could donate your money to, but if you'd like to support the developer with a small donation to see more projects like this one, you'd be very appreciated!</p>
                 <h3>Patreon</h3>
-                <a href="https://patreon.com/sebastianalsina">
+                <a target="_blank" href="https://patreon.com/sebastianalsina">
                     <button>
                         Become a Patron
                     </button>

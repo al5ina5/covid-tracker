@@ -1,8 +1,8 @@
 import React from 'react'
 import Axios from 'axios'
 import Link from 'next/link'
-import States from './states.json'
-import { formatNumber } from '../../utils'
+import States from '../states.json'
+import { formatNumber } from '../utils'
 
 class Index extends React.Component {
     constructor(props) {

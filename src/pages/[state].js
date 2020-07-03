@@ -1,6 +1,7 @@
 import React from 'react'
+import Head from 'next/head'
 import Axios from 'axios'
-import { formatNumber } from '../../utils'
+import { formatNumber } from '../utils'
 
 class StateTracker extends React.Component {
     constructor(props) {
@@ -25,6 +26,9 @@ class StateTracker extends React.Component {
 
     render() {
         return <>
+            <Head>
+                <title>{this.props.state.toUpperCase()} COVID-19: The Numbers</title>
+            </Head>
             <section>
                 <h1>COVID-19 in {this.props.state.toUpperCase()}</h1>
                 <h2>{formatNumber(this.props.covid.positive)} have tested positive in {this.props.state.toUpperCase()}. {formatNumber(this.props.covid.death)} have died.</h2>
