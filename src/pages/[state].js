@@ -32,7 +32,7 @@ class StateTracker extends React.Component {
             <section>
                 <h1>COVID-19 in {this.props.state.toUpperCase()}</h1>
                 <h2>{formatNumber(this.props.covid.positive)} have tested positive in {this.props.state.toUpperCase()}. {formatNumber(this.props.covid.death)} have died.</h2>
-                <h2>Today, {formatNumber(this.props.covid.positiveIncrease)} more tested positive and {formatNumber(this.props.covid.deathIncrease)} died.</h2>
+                <h2>In the past 24 hours, {formatNumber(this.props.covid.positiveIncrease)} more tested positive and {formatNumber(this.props.covid.deathIncrease)} died.</h2>
             </section>
 
             <section>
